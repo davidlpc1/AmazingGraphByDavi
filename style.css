@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border:none;
+    border-radius: 0;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --orange:#D2872C;
+    --gray:#766F68;
+    --white:#fff;
+    --black:#000;
+    --blue:#22a;
+}
+
+body{
+    height:100vh;
+    background:var(--white);
+    display:flex;
+    padding:10px;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    color:var(--orange)
+}
+
+header nav{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+
+main{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+img{
+    max-width: 300px;
+}
+
+.text{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title_gray,.text_gray-50{
+    color: var(--gray);
+}
+
+.text_gray-50{
+    opacity:0.9;
+}
+
+button{
+    margin:10px;
+    background: var(--orange);
+    padding: 20px 40px;
+    border-radius: 8px;
+    color: var(--white);
+    font-size: 20px;
+    font-weight:600;
+}
+
+span,ul{
+    display:none;
+}
+
+span.active{
+    margin:3px;
+    display:block;
+    height: 7px;
+    width: 39px;
+    background: var(--gray);
+}
+
+ul.active{
+    text-align: center;
+    background:#eee;
+    display:initial;
+    width: 110px;
+}
+
+li a{
+    color: var(--black);
+    text-decoration: none;
+}
+
+li a:hover,li a:active{
+    text-decoration: underline;
+    color: var(--blue)
+}
+
+@media (min-width: 768px) {
+    span.active{
+        display:none;
+    }
+
+    ul{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:10px;
+    }
+
+    li a{
+        font-size: 20px;
+        color: var(--gray);
+        text-decoration: none;
+    }
+
+    main{
+        display:flex;
+        flex-direction: row-reverse;
+        margin: 0 20px;
+    }
+
+    img{
+        min-width: 450px;
+    }
+
+    .title_gray,.text_gray-50{
+        font-size: 25px;
+    }
+}
